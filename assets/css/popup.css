@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  width: 260px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-message {
+  background-color: #facc15;
+  color: #1a1a1a;
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.status-success {
+  background-color: #4ade80;
+}
+
+button {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: #ef4444;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #dc2626;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button[disabled] {
+  background-color: #7f1d1d;
+  cursor: not-allowed;
+}
+
+svg.block-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  margin-right: 8px;
+}
+
+hr {
+  margin: 12px 0;
+  border: none;
+  border-top: 1px solid #333;
+}
+
+.links a {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: #60a5fa;
+}
+
+footer {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #262626;
+  font-size: 0.7rem;
+  text-align: center;
+  color: #6b7280;
+}

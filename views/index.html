@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeBlocker - Extension Settings</title>
+  <link rel="shortcut icon" href="../assets/images/icons/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="../assets/css/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body class="bg-gray-50">
+
+  <div id="mainBody" class="hidden">
+    <div class="flex h-screen">
+      <aside class="w-64 bg-white shadow-lg border-r border-gray-200">
+        <div class="p-6 border-b border-gray-200">
+          <div class="flex items-center space-x-3">
+            <div class="bg-green-700 flex h-8 items-center justify-center rounded-lg w-8">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd"
+                  d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h1 class="text-xl font-bold text-gray-900">WeBlocker</h1>
+          </div>
+        </div>
+
+        <nav class="p-4">
+          <ul class="space-y-2">
+            <li>
+              <button
+                class="nav-btn flex items-center w-full px-3 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900 active"
+                data-target="dashboard">
+                <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z">
+                  </path>
+                </svg>
+                Dashboard
+              </button>
+            </li>
+            <li>
+              <button
+                class="nav-btn flex items-center w-full px-3 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900"
+                data-target="general">
+                <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                General Settings
+              </button>
+            </li>
+            <li>
+              <button
+                class="nav-btn flex items-center w-full px-3 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900"
+                data-target="domains">
+                <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.559-.499-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.559.499.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.497-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                Blocked Domains
+              </button>
+            </li>
+            <li>
+              <button
+                class="nav-btn flex items-center w-full px-3 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900"
+                data-target="keywords">
+                <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z">
+                  </path>
+                </svg>
+                Blocked Keywords
+              </button>
+            </li>
+            <li>
+              <button
+                class="nav-btn flex items-center w-full px-3 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900"
+                data-target="whitelist">
+                <svg class="w-5 h-5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <g fill="none">
+                    <path
+                      d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                    <path fill="currentColor"
+                      d="m8.464 7.05l8.486 8.486L13.485 19H20a1 1 0 1 1 0 2H8.893a1.5 1.5 0 0 1-1.06-.44l-5.026-5.024a2 2 0 0 1 0-2.829zm7.071-4.242l5.657 5.656a2 2 0 0 1 0 2.829l-2.828 2.828l-8.485-8.485l2.828-2.828a2 2 0 0 1 2.828 0" />
+                  </g>
+                </svg>
+                Whitelist Domains
+              </button>
+            </li>
+            <li>
+              <button
+                class="nav-btn flex items-center w-full px-3 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900"
+                data-target="activities">
+                <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill="currentColor" fill-rule="evenodd"
+                    d="M3.5 2.5v11h9v-11zM3 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm5 10a.75.75 0 0 1 .75-.75h1.75a.75.75 0 0 1 0 1.5H8.75A.75.75 0 0 1 8 11m-2 1a1 1 0 1 0 0-2a1 1 0 0 0 0 2m2-4a.75.75 0 0 1 .75-.75h1.75a.75.75 0 0 1 0 1.5H8.75A.75.75 0 0 1 8 8M6 9a1 1 0 1 0 0-2a1 1 0 0 0 0 2m2-4a.75.75 0 0 1 .75-.75h1.75a.75.75 0 0 1 0 1.5H8.75A.75.75 0 0 1 8 5M6 6a1 1 0 1 0 0-2a1 1 0 0 0 0 2"
+                    clip-rule="evenodd" />
+                </svg>
+                Activity Logs
+              </button>
+            </li>
+            <li>
+              <button
+                class="nav-btn flex items-center w-full px-3 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900"
+                data-target="importExport">
+                <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                Import / Export
+              </button>
+            </li>
+            <li>
+              <button
+                class="nav-btn flex items-center w-full px-3 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900"
+                data-target="security">
+                <svg class="w-5 h-5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                    d="M12 12h7c-.53 4.11-3.28 7.78-7 8.92zH5V6.3l7-3.11M12 1L3 5v6c0 5.55 3.84 10.73 9 12c5.16-1.27 9-6.45 9-12V5z" />
+                </svg>
+                Security
+              </button>
+            </li>
+
+            <li id="logout">
+              <button
+                class="flex items-center w-full px-3 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900">
+                <svg class="w-5 h-5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path d="M14 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-2" />
+                    <path d="M9 12h12l-3-3m0 6l3-3" />
+                  </g>
+                </svg>
+                Logout
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="flex-1 overflow-y-auto relative pl-64 pr-4">
+        <div class="p-6 max-w-4xl mx-auto">
+          <!-- Dashboard Section -->
+          <section id="dashboard" class="section active">
+            <div class="mb-6">
+              <h2 class="text-3xl font-bold text-gray-900">Dashboard</h2>
+              <p class="text-gray-600 text-sm mt-2">
+                Overview of your blocking activity and settings
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              <!-- Blocked Domains Card -->
+              <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-5">
+                <div class="flex items-center">
+                  <div class="p-3 mr-2 bg-blue-100 rounded-lg">
+                    <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.559-.499-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.559.499.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.497-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-900">
+                      Blocked Domains
+                    </h3>
+                    <p class="text-2xl font-bold text-blue-600" id="domainsCount">
+                      0
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Blocked Keywords Card -->
+              <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-5">
+                <div class="flex items-center">
+                  <div class="p-3 mr-2 bg-green-100 rounded-lg">
+                    <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-900">
+                      Blocked Keywords
+                    </h3>
+                    <p class="text-2xl font-bold text-green-600" id="keywordsCount">
+                      0
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Active Blocking Rules Card -->
+              <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-5">
+                <div class="flex items-center">
+                  <div class="p-3 mr-2 bg-red-100 rounded-lg">
+                    <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-900">
+                      Active Rules
+                    </h3>
+                    <p class="text-2xl font-bold text-red-600" id="activeRules">
+                      0
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Extension Status -->
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-10">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-900">
+                    Extension Status
+                  </h3>
+                  <p class="text-gray-600 text-base mt-1">
+                    Current state of your WeBlocker extension
+                  </p>
+                </div>
+                <div class="flex items-center">
+                  <span id="statusElement" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium">
+
+                    <span class="relative flex h-2 w-2 mr-2">
+                      <span class="ping animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"></span>
+                      <span class="ping relative inline-flex rounded-full h-2 w-2"></span>
+                    </span>
+
+                    <strong id="extensionStatus"></strong>
+
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- About WeBlocker -->
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+              <div id="about" class="space-y-3">
+                <div class="text-base font-semibold text-gray-700 text-center">
+                  <div class="mb-2">
+                    <h1 class="font-bold text-gray-900 text-xl">
+                      <img src="../assets/images/icons/icon128.png" alt="" class="h-6 inline w-6">
+                      WeBlocker
+                    </h1>
+                  </div>
+
+                  <a href="https://github.com/ujaRHR/weblocker" class="text-green-700">WeBlocker</a> helps you regain
+                  focus by blocking
+                  time-wasting domains and keyword-loaded URLs using
+                  Chrome's secure MV3 API. All processing is private, fast, and runs entirely within your browser.
+                </div>
+                <div class="text-center">
+                  <a href="https://github.com/ujaRHR/weblocker" target="_blank"
+                    class="bg-gray-800 font-medium hover:bg-gray-900 inline-flex items-center px-3 py-1 rounded text-sm text-white">
+                    ⭐ Star on GitHub
+                  </a>
+                  <a href="https://github.com/ujaRHR/weblocker/issues"
+                    class="bg-red-800 font-medium hover:bg-red-900 inline-flex items-center px-3 py-1 rounded text-sm text-white">🐛
+                    Report Issues
+                  </a>
+                  <a href="https://github.com/ujaRHR/weblocker/releases" target="_blank"
+                    class="bg-blue-800 font-medium hover:bg-blue-900 inline-flex items-center px-3 py-1 rounded text-sm text-white">📋
+                    Changelogs
+                  </a>
+                  <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer"
+                    class="bg-green-800 font-medium hover:bg-green-900 inline-flex items-center px-3 py-1 rounded text-sm text-white">
+                    🛡️ MIT License
+                  </a>
+                  <p class="text-sm font-semibold mt-2 text-gray-600">🔒 No tracking. No servers. 100% local.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- General Settings Section -->
+          <section id="general" class="section">
+            <div class="mb-6">
+              <h2 class="text-3xl font-bold text-gray-900">General Settings</h2>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+              <div class="space-y-6">
+                <!-- Enable Extension Toggle -->
+                <div class="flex items-center space-x-3">
+                  <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="enableToggle" class="sr-only peer" checked />
+                    <div
+                      class="after:absolute after:bg-white after:border after:border-gray-300 after:content-[''] after:h-5 after:rounded-full after:start-[2px] after:top-[2px] after:transition-all after:w-5 bg-gray-200 h-6 peer peer-checked:after:border-white peer-checked:after:translate-x-full peer-checked:bg-green-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 relative rounded-full rtl:peer-checked:after:-translate-x-full w-11">
+                    </div>
+                    <span class="ms-3 text-base font-medium text-gray-900">Enable Extension</span>
+                  </label>
+                </div>
+
+                <div
+                  class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-xl shadow-sm flex items-start space-x-3">
+                  <svg class="w-6 h-6 text-yellow-400 mt-1" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M13 16h-1v-4h-1m1-4h.01M12 20c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z" />
+                  </svg>
+                  <div>
+                    <h3 class="text-sm font-semibold text-yellow-800">Pro Tip: Enable in Incognito Mode</h3>
+                    <p class="mt-1 text-sm text-yellow-700">
+                      To allow WeBlocker to work in Incognito (private) tabs, go to
+                      <strong>chrome://extensions</strong>, find WeBlocker, click <strong>"Details"</strong>, and turn
+                      on <strong>"Allow in Private"</strong>.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Block Mode -->
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm font-medium text-gray-900">
+                    <svg class="w-5 h-5 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path fill="currentColor"
+                        d="M18 8h-1V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2M9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9zm4 8.723V18h-2v-2.277c-.595-.346-1-.984-1-1.723a2 2 0 1 1 4 0c0 .738-.405 1.376-1 1.723"
+                        stroke-width="0.5" stroke="currentColor" />
+                    </svg>
+                    Blocking Mode</label>
+                  <div class="w-full flex gap-4">
+                    <div class="flex w-1/2 gap-2">
+                      <label
+                        class="flex w-1/2 items-center h-16 px-3 py-4 bg-gray-100 border border-gray-300 rounded-sm dark:border-gray-700 cursor-pointer">
+                        <input type="radio" name="blockMode" value="smart"
+                          class="w-4 h-4 text-green-600 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                        <span class="ms-2 text-sm font-medium text-gray-800 dark:text-gray-300">
+                          Smart
+                        </span>
+                      </label>
+
+                      <label
+                        class="flex w-1/2 items-center h-16 px-3 py-4 bg-gray-100 border border-gray-200 rounded-sm dark:border-gray-700 cursor-pointer">
+                        <input type="radio" name="blockMode" value="strict"
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                        <span class="ms-2 text-sm font-medium text-gray-800 dark:text-gray-300">
+                          Strict
+                        </span>
+                      </label>
+                    </div>
+
+                    <!-- Mode Description -->
+                    <div class="flex w-1/2 space-y-2">
+                      <div id="blockModeDescription"
+                        class="w-full bg-red-200 border border-gray-200 text-red-800 text-sm font-medium rounded-lg p-2.5">
+                        <svg class="w-5 h-5 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                          <path fill="currentColor" fill-rule="evenodd"
+                            d="M24.378 5.385c-4.83.7-9.843 2.474-13.676 6.307c-5.99 5.99-6.742 14.675-2.579 20.302c2.337-4.222 5.5-8.124 8.714-11.487c6.42-6.718 13.475-11.724 16.113-13.453a2 2 0 1 1 2.192 3.346c-2.488 1.63-9.274 6.447-15.413 12.87c-3.426 3.584-6.524 7.54-8.618 11.62c2.683 1.863 5.989 2.639 9.378 2.309a2 2 0 0 1 .387 3.981c-3.977.387-7.984-.44-11.37-2.557c-.73 2.123-1.142 4.26-1.142 6.377a2 2 0 0 1-4 0c0-3.085.7-6.123 1.87-9.049C-.782 28.59.194 16.544 7.874 8.863c4.648-4.648 10.588-6.663 15.93-7.437c5.346-.775 10.252-.333 13.04.071a5.21 5.21 0 0 1 4.433 4.435c.466 3.222.99 9.308-.4 15.634a2 2 0 1 1-3.907-.859c1.243-5.659.782-11.205.348-14.202a1.21 1.21 0 0 0-1.048-1.05c-2.576-.372-7.064-.77-11.892-.07m3.993 20.003c1.497-.212 3.754-.388 7.13-.388s5.633.176 7.13.388c2.19.31 3.493 2.084 3.67 4.104c.107 1.21.2 2.766.2 4.508c0 4.859-2.566 9.443-6.939 11.693C38.22 46.384 36.72 47 35.501 47s-2.719-.616-4.061-1.307C27.067 43.443 24.5 38.86 24.5 34c0-1.742.093-3.297.2-4.508c.177-2.02 1.48-3.794 3.67-4.104m13.59 6.578a1.75 1.75 0 0 0-2.92-1.932l-4.023 6.08l-2.196-2.528a1.75 1.75 0 1 0-2.642 2.295l3.706 4.267a1.75 1.75 0 0 0 2.78-.182z"
+                            clip-rule="evenodd" />
+                        </svg>
+                        <strong> Smart Mode:</strong> Blocks any partial matches
+                        from both the <em>Blocked Domains</em>
+                        and
+                        <em>Blocked Keywords</em> lists.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="space-y-2">
+                  <div class="flex w-full gap-4">
+                    <!-- Redirect Behavior -->
+                    <div class="flex flex-col w-1/2 gap-2">
+                      <label for="redirectBehavior" class="flex items-center gap-2 text-sm font-medium text-gray-900">
+                        <svg class="w-5 h-5 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                          <path fill="currentColor" fill-rule="evenodd"
+                            d="m50 0l-1.455 2.518l-14.063 24.328h7.114v22.63a75.4 75.4 0 0 1 8.4 11.337a77 77 0 0 1 8.408-11.329V26.846h7.114zM30.89 34.348L0 37.057l1.666 2.382l16.098 23.034l2.51-5.377c7.137 5.62 17.034 16.617 19.283 35.492c.441-4.589 1.239-9.144 2.505-13.58c1.368-4.927 3.288-9.679 5.665-14.192C41.472 53.731 33.27 46.26 27.373 41.885zm38.22 0l3.517 7.537c-10.755 7.975-29.184 26.22-29.459 57.969l16.805.146c.203-23.476 11.728-36.585 19.754-42.904l2.51 5.377L100 37.057l-2.896-.254z"
+                            color="currentColor" />
+                        </svg>
+                        Redirect Behavior
+                      </label>
+                      <div class="flex gap-2">
+                        <label
+                          class="items-center h-16 px-3 py-4 bg-gray-100 border border-gray-300 rounded-sm dark:border-gray-700 cursor-pointer w-full">
+                          <input type="radio" name="redirectType" value="default" checked
+                            class="w-4 h-4 text-green-600 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                          <span class="ms-2 text-sm font-medium text-gray-800 dark:text-gray-300">Default Page</span>
+                        </label>
+
+                        <label
+                          class="items-center h-16 px-3 py-4 bg-gray-100 border border-gray-300 rounded-sm dark:border-gray-700 cursor-pointer w-full">
+                          <input type="radio" name="redirectType" value="custom"
+                            class="w-4 h-4 text-green-600 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                          <span class="ms-2 text-sm font-medium text-gray-800 dark:text-gray-300">Custom URL</span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Redirect URL -->
+                    <div class="flex-1 space-y-2">
+                      <label for="redirectUrl" class="flex items-center gap-2 text-sm font-medium text-gray-900">
+                        <svg class="w-5 h-5 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2">
+                            <path d="M20.946 12.99a9 9 0 1 0-9.46 7.995M3.6 9h16.8M3.6 15h13.9" />
+                            <path d="M11.5 3a17 17 0 0 0 0 18m1-18a17 17 0 0 1 2.311 12.001M15 19l2 2l4-4" />
+                          </g>
+                        </svg>
+                        Redirect URL
+                      </label>
+                      <div class="relative">
+                        <input type="text" id="redirectUrl" aria-describedby="helper-text-explanation"
+                          class="bg-gray-100 border border-gray-300 text-gray-800 text-sm font-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                          placeholder="https://example.com" value="https://example.com" />
+                        <p id="helper-text-explanation" class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                          Enter a valid URL (e.g., https://example.com)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex justify-start">
+                  <button id="saveSettings"
+                    class="bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium hover:bg-green-800 px-5 py-2.5 rounded-lg text-sm text-white">
+                    Save Settings
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Blocked Domains Section -->
+          <section id="domains" class="section">
+            <div class="mb-6">
+              <h2 class="text-3xl font-bold text-gray-900">Blocked Domains</h2>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+              <div class="flex">
+                <div class="flex-1">
+                  <h2 class="font-semibold mb-2 text-gray-800 text-lg">Format Requirements:</h2>
+                  <ul class="dark:text-gray-400 font-medium list-inside max-w-md space-y-1 text-gray-500 text-sm">
+                    <li class="flex items-center">
+                      <svg class="h-3.5 me-2 shrink-0 text-green-600 w-3.5" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                        </path>
+                      </svg>
+                      One domain per line
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="h-3.5 me-2 shrink-0 text-green-600 w-3.5" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                        </path>
+                      </svg>
+                      No http://, https://, or protocols
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="w-3.5 h-3.5 me-2 text-green-600 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                        </path>
+                      </svg>
+                      No query in URLs
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="w-3.5 h-3.5 me-2 text-green-600 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                        </path>
+                      </svg>
+                      Avoid wildcards
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="w-3.5 h-3.5 me-2 text-green-600 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                        </path>
+                      </svg>
+                      Duplicate domains will be removed
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="w-3.5 h-3.5 me-2 text-green-600 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                        </path>
+                      </svg>
+                      No space or irrelevant characters
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex-1 space-y-6">
+                  <div class="space-y-2">
+                    <textarea id="blockedDomains" rows="8"
+                      class="bg-gray-100 block border border-gray-300 focus:border-blue-500 focus:ring-blue-500 font-mono p-2.5 rounded-lg text-gray-900 text-sm w-full"
+                      placeholder="example.com&#10;badsite.com&#10;spam.net"></textarea>
+                    <div id="domainsWarning" class="hidden bg-red-100 font-semibold p-2 rounded-lg text-red-800 text-sm"
+                      role="alert">
+                    </div>
+                  </div>
+                  <div class="flex justify-end">
+                    <button id="saveDomains"
+                      class="bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium hover:bg-green-800 px-5 py-2.5 rounded-lg text-sm text-white">
+                      Save Domains
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Blocked Keywords Section -->
+          <section id="keywords" class="section">
+            <div class="mb-6">
+              <h2 class="text-3xl font-bold text-gray-900">Blocked Keywords</h2>
+            </div>
+
+            <div class="flex bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+              <div class="flex-1">
+                <h2 class="font-semibold mb-2 text-gray-800 text-lg">Format Requirements:</h2>
+                <ul class="dark:text-gray-400 font-medium list-inside max-w-md space-y-1 text-gray-500 text-sm">
+                  <li class="flex items-center">
+                    <svg class="h-3.5 me-2 shrink-0 text-green-600 w-3.5" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                      </path>
+                    </svg>
+                    One keyword or phrase per line
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="h-3.5 me-2 shrink-0 text-green-600 w-3.5" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                      </path>
+                    </svg>
+                    Case-sensitive or case-insensitive
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-3.5 h-3.5 me-2 text-green-600 shrink-0" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                      </path>
+                    </svg>
+                    Only _ and - are allowed
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-3.5 h-3.5 me-2 text-green-600 shrink-0" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                      </path>
+                    </svg>
+                    Maximum 50 characters per keyword
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-3.5 h-3.5 me-2 text-green-600 shrink-0" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                      </path>
+                    </svg>
+                    Duplicate keywords will be removed
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-3.5 h-3.5 me-2 text-green-600 shrink-0" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                      </path>
+                    </svg>
+                    No space or irrelevant characters
+                  </li>
+                </ul>
+              </div>
+              <div class="flex-1 space-y-6">
+                <div class="space-y-2">
+                  <textarea id="blockedKeywords" rows="8"
+                    class="bg-gray-100 block border border-gray-300 focus:border-blue-500 focus:ring-blue-500 font-mono p-2.5 rounded-lg text-gray-900 text-sm w-full"
+                    placeholder="gambling&#10;adult&#10;violence"></textarea>
+                  <div id="keywordsWarning" class="hidden bg-red-100 font-semibold p-2 rounded-lg text-red-800 text-sm"
+                    role="alert">
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <button id="saveKeywords"
+                    class="bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium hover:bg-green-800 px-5 py-2.5 rounded-lg text-sm text-white">
+                    Save Keywords
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Whitelist Domains Section -->
+          <section id="whitelist" class="section">
+            <div class="mb-6">
+              <h2 class="text-3xl font-bold text-gray-900">Whitelist Domains</h2>
+            </div>
+
+            <div class="flex bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+              <div class="flex-1">
+                <h2 class="font-semibold mb-2 text-gray-800 text-lg">Format Requirements:</h2>
+                <ul class="dark:text-gray-400 font-medium list-inside max-w-md space-y-1 text-gray-500 text-sm">
+                  <li class="flex items-center">
+                    <svg class="h-3.5 me-2 shrink-0 text-green-600 w-3.5" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                      </path>
+                    </svg>
+                    One domain per line
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="h-3.5 me-2 shrink-0 text-green-600 w-3.5" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                      </path>
+                    </svg>
+                    No http://, https://, or protocols
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-3.5 h-3.5 me-2 text-green-600 shrink-0" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                      </path>
+                    </svg>
+                    No query in URLs
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-3.5 h-3.5 me-2 text-green-600 shrink-0" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                      </path>
+                    </svg>
+                    Avoid wildcards
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-3.5 h-3.5 me-2 text-green-600 shrink-0" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                      </path>
+                    </svg>
+                    Duplicate domains will be removed
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-3.5 h-3.5 me-2 text-green-600 shrink-0" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                      </path>
+                    </svg>
+                    No space or irrelevant characters
+                  </li>
+                </ul>
+              </div>
+              <div class="flex-1 space-y-6">
+                <div class="space-y-2">
+                  <textarea id="whitelistedDomains" rows="8"
+                    class="bg-gray-100 block border border-gray-300 focus:border-blue-500 focus:ring-blue-500 font-mono p-2.5 rounded-lg text-gray-900 text-sm w-full"
+                    placeholder="example.com&#10;goodsite.com&#10;wikipedia.org"></textarea>
+                  <div id="whitelistWarning" class="hidden bg-red-100 font-semibold p-2 rounded-lg text-red-800 text-sm"
+                    role="alert">
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <button id="allowDomains"
+                    class="bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium hover:bg-green-800 px-5 py-2.5 rounded-lg text-sm text-white">
+                    Allow Domains
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Activity Logs Section -->
+          <section id="activities" class="section">
+            <div class="mb-6">
+              <h2 class="text-3xl font-bold text-gray-900">Activity Logs</h2>
+            </div>
+
+            <div class="space-y-6">
+              <div class="bg-white rounded-lg p-6 border border-gray-200">
+                <div class="mb-3">
+                  <span class="font-medium text-gray-600 text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="h-5 inline w-5">
+                      <path fill="currentColor" d="M1.75 13.25V1.5H.5v12a1.24 1.24 0 0 0 1.22 1H15.5v-1.25z"></path>
+                      <path fill="currentColor"
+                        d="M3.15 8H4.4v3.9H3.15zm3.26-4h1.26v7.9H6.41zm3.27 2h1.25v5.9H9.68zm3.27-3.5h1.25v9.4h-1.25z">
+                      </path>
+                    </svg>
+                    Based on visits and average session duration, these are the most engaged websites.</span>
+                </div>
+                <div id="activityList" class="text-sm text-gray-600">
+                  No recent activity available.
+                </div>
+              </div>
+              <div class="flex justify-end">
+                <button id="clearActivites"
+                  class="text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none">
+                  Clear All
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Import/Export Section -->
+          <section id="importExport" class="section">
+            <div class="mb-6">
+              <h2 class="text-3xl font-bold text-gray-900">Import / Export</h2>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+              <div class="mb-3">
+                <span class="text-gray-600 text-sm">
+                  <svg class="inline w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="m21.17 15.4l-5.91-9.85c-.78-1.3-1.96-2.04-3.26-2.04s-2.48.74-3.26 2.03L2.83 15.4c-.44.73-.66 1.49-.66 2.21c0 .57.14 1.13.42 1.62C3.23 20.35 4.47 21 6 21h12c1.53 0 2.77-.65 3.41-1.77c.28-.49.42-1.02.42-1.58c.01-.74-.21-1.51-.66-2.25M12 8.45c.85 0 1.55.7 1.55 1.55s-.69 1.55-1.55 1.55c-.85 0-1.55-.7-1.55-1.55c0-.86.69-1.55 1.55-1.55m1.69 8.46c-.03.04-.8.92-2.07.92h-.15c-.51-.03-.93-.25-1.18-.63c-.31-.47-.36-1.11-.12-1.82l.41-1.22c.23-.68.01-.79-.11-.85l-.14-.02c-.25 0-.6.15-.71.21c-.1.05-.23.03-.31-.07c-.07-.1-.07-.23.01-.32c.03-.04.87-.99 2.22-.91c.51.03.93.25 1.18.63c.32.47.36 1.11.12 1.83l-.41 1.22c-.23.68-.01.79.11.85l.14.02c.25 0 .6-.15.71-.2c.11-.06.23-.03.31.07c.07.07.07.2-.01.29" />
+                  </svg>
+                  Import and export only support JSON format. Importing will replace your current settings, while
+                  exporting will download your existing configuration as a .json file. Make sure the imported JSON
+                  matches
+                  the correct structure; otherwise, invalid or malformed data will be ignored.
+                </span>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <button id="importSettings"
+                  class="flex flex-col items-center justify-center h-20 px-4 py-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm">
+                  <svg class="w-6 h-6 mb-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Import Settings
+                </button>
+
+                <button id="exportSettings"
+                  class="bg-green-700 flex flex-col focus:outline-none focus:ring-4 focus:ring-green-300 font-medium h-20 hover:bg-green-800 items-center justify-center px-4 py-2 rounded-lg text-sm text-white">
+                  <svg class="w-6 h-6 mb-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Export Settings
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Security / Password Protection Section -->
+          <section id="security" class="section">
+            <div class="mb-6">
+              <h2 class="text-3xl font-bold text-gray-900">Password Protection</h2>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+              <div class="flex">
+                <div class="flex-1">
+                  <div class="flex items-center mb-3 space-x-3">
+                    <label class="inline-flex items-center cursor-pointer">
+                      <input type="checkbox" id="toggleProtection" class="sr-only peer">
+                      <div
+                        class="after:absolute after:bg-white after:border after:border-gray-300 after:content-[''] after:h-5 after:rounded-full after:start-[2px] after:top-[2px] after:transition-all after:w-5 bg-gray-200 h-6 peer peer-checked:after:border-white peer-checked:after:translate-x-full peer-checked:bg-green-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 relative rounded-full rtl:peer-checked:after:-translate-x-full w-11">
+                      </div>
+                      <span class="ms-3 text-base font-medium text-gray-900">Enable Protection</span>
+                    </label>
+                  </div>
+
+                  <ul class="dark:text-gray-400 font-medium list-inside max-w-md space-y-1 text-gray-500 text-sm">
+                    <li class="flex items-center">
+                      <svg class="h-3.5 me-2 shrink-0 text-green-600 w-3.5" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                        </path>
+                      </svg>
+                      Locks settings from casual changes.
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="h-3.5 me-2 shrink-0 text-green-600 w-3.5" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                        </path>
+                      </svg>
+                      Auto logout in every one hour
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="h-3.5 me-2 shrink-0 text-green-600 w-3.5" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                        </path>
+                      </svg>
+                      Password is securely hashed, and stored locally.
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="h-3.5 me-2 shrink-0 text-green-600 w-3.5" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                        </path>
+                      </svg>
+                      Passwords are not recoverable.
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="h-3.5 me-2 shrink-0 text-green-600 w-3.5" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z">
+                        </path>
+                      </svg>
+                      Minimum 6 characters are required.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="flex-1 space-y-6">
+                  <div id="setPass">
+                    <h2 class="font-semibold mb-2 mt-1 text-green-700 text-sm">You haven't set a password yet. Create
+                      one
+                      to protect your settings.</h2>
+                    <div class="space-y-2">
+                      <input id="password" type="password"
+                        class="bg-gray-100 block border border-gray-300 focus:border-blue-500 focus:ring-blue-500 font-mono p-2.5 rounded-lg text-gray-900 text-sm w-full"
+                        placeholder="New Password" />
+
+                      <input id="confirmPassword" type="password"
+                        class="bg-gray-100 block border border-gray-300 focus:border-blue-500 focus:ring-blue-500 font-mono p-2.5 rounded-lg text-gray-900 text-sm w-full"
+                        placeholder="Confirm Password" />
+                      <div id="passwordWarning"
+                        class="hidden bg-red-100 font-semibold mb-2 p-2 rounded-lg text-red-800 text-sm" role="alert">
+                      </div>
+                    </div>
+                    <div class="flex justify-end">
+                      <button id="savePassword"
+                        class="bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium hover:bg-green-800 px-5 py-2.5 rounded-lg text-sm text-white">
+                        Save Password
+                      </button>
+                    </div>
+                  </div>
+
+                  <div id="updatePass" class="hidden">
+                    <h2 class="font-semibold mb-2 mt-1 text-red-700 text-sm">A password is already set. You can only
+                      update it now.</h2>
+                    <div class="space-y-2">
+                      <input id="currentPassword" type="password"
+                        class="bg-gray-100 block border border-gray-300 focus:border-blue-500 focus:ring-blue-500 font-mono p-2.5 rounded-lg text-gray-900 text-sm w-full"
+                        placeholder="Current Password" />
+
+                      <input id="newPassword" type="password"
+                        class="bg-gray-100 block border border-gray-300 focus:border-blue-500 focus:ring-blue-500 font-mono p-2.5 rounded-lg text-gray-900 text-sm w-full"
+                        placeholder="New Password" />
+                      <div id="updateWarning"
+                        class="hidden bg-red-100 font-semibold mb-2 p-2 rounded-lg text-red-800 text-sm" role="alert">
+                      </div>
+                    </div>
+                    <div class="flex justify-end">
+                      <button id="updatePassword"
+                        class="bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium hover:bg-red-800 px-5 py-2.5 rounded-lg text-sm text-white">
+                        Update Password
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div id="footer" class="absolute bottom-2 left-0 right-0 text-center">
+            <p class="font-bold text-gray-500 text-sm">
+              WeBlocker, Built with
+              <span class="animate-pulse">❤️</span> by
+              <a class="text-green-700" href="https://github.com/ujaRHR">RAJU</a>
+            </p>
+          </div>
+        </div>
+    </div>
+    </main>
+  </div>
+
+  <!-- Hidden file input for import -->
+  <input type="file" id="fileInput" accept=".json" style="display: none" />
+  </div>
+
+  <!-- Login Page -->
+  <div id="loginBody" class="hidden">
+    <div class="fixed inset-0 flex items-center justify-center bg-gray-100 z-50">
+      <div class="bg-white border border-gray-200 max-w-sm p-6 rounded-lg shadow-green-500/50 shadow-lg w-full">
+        <div class="space-y-6">
+
+          <div class="flex justify-center">
+            <div class="relative">
+              <img src="../assets/images/icons/icon128.png" alt="WeBlocker Logo" class="w-20 h-20 rounded-md mx-auto" />
+              <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <div class="w-8 h-8 border-4 border-gray-800 rounded-t-full border-b-0"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <div class="mb-2 text-center">
+              <span for="password" class="font-semibold text-gray-600 text-sm">
+                Your login session is valid for only 1 hour. After that, you'll need to log in again.
+              </span>
+            </div>
+            <div>
+              <input id="loginPassword" type="password"
+                class="text-center bg-gray-100 border border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 font-semibold p-2.5 rounded-lg text-gray-900 text-sm w-full"
+                placeholder="Enter your password " />
+              <div id="loginWarning" class="hidden bg-red-100 mt-2 font-semibold p-2 rounded-lg text-red-800 text-sm"
+                role="alert"></div>
+            </div>
+          </div>
+
+          <div class="flex justify-center">
+            <button id="loginBtn"
+              class="bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium px-5 py-2.5 rounded-lg text-sm text-white">
+              Access Settings
+            </button>
+          </div>
+
+          <div class="bottom-2 fixed left-1/2 transform -translate-x-1/2">
+            <p class="font-bold text-gray-600 text-sm">
+              <svg class="w-6 h-6 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 12h7c-.53 4.11-3.28 7.78-7 8.92zH5V6.3l7-3.11M12 1L3 5v6c0 5.55 3.84 10.73 9 12c5.16-1.27 9-6.45 9-12V5z" />
+              </svg>
+              Protected by WeBlocker
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="../assets/js/flowbite.min.js"></script>
+  <script type="module" src="../core/index.js"></script>
+</body>
+
+</html>

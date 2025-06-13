@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "WeBlocker - Domain & Keywords Blocker",
+  "version": "1.0",
+  "description": "Take Control of Your Digital Focus",
+  "icons": {
+    "16": "assets/images/icons/icon16.png",
+    "32": "assets/images/icons/icon32.png",
+    "48": "assets/images/icons/icon48.png",
+    "64": "assets/images/icons/icon.png",
+    "128": "assets/images/icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "core/background/background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "views/popup.html"
+  },
+  "options_page": "views/index.html",
+  "permissions": ["declarativeNetRequest", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "views/focused.html",
+        "views/index.html",
+        "views/popup.html"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

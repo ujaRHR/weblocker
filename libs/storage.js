@@ -1,6 +1,6 @@
 /* Date: May 29, 2025
  * Author: Reajul Hasan Raju
- * Library: To freequenty access into chrome extension's local storage (get, set)
+ * Library: To frequently access into chrome extension's local storage (get, set)
  * Source: https://github.com/ujaRHR/weblocker
  */
 

@@ -1,16 +1,21 @@
-<center>
+<p align="center">
   <img src="https://raw.githubusercontent.com/ujaRHR/weblocker/refs/heads/main/assets/images/wb_banner.png" width="600" alt="WeBlocker Banner">
-  <h1>WeBlocker - Take Control of Your Digital Focus</h1>
+</p>
 
-  **WeBlocker** is a lightweight, privacy-focused Chrome Extension that helps you stay focused by **blocking distracting websites** and **URLs containing specific keywords** using Chrome's secure MV3 API. All processing is private, fast, and runs entirely within your browser.
+<h1 align="center">WeBlocker - Take Control of Your Digital Focus</h1>
 
-  ![Google Chrome](https://img.shields.io/badge/Google_chrome-4285F4?style=for-the-badge&logo=Google-chrome&logoColor=white)
-  ![Brave](https://img.shields.io/badge/Brave-FF1B2D?style=for-the-badge&logo=Brave&logoColor=white)
-  ![Edge](https://img.shields.io/badge/Microsoft_Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white)
-  ![Vivaldi](https://img.shields.io/badge/Vivaldi-EF3939?style=for-the-badge&logo=Vivaldi&logoColor=white)
-  ![DuckDuckGo](https://img.shields.io/badge/duckduckgo-de5833?style=for-the-badge&logo=duckduckgo&logoColor=white)
-  ![Opera](https://img.shields.io/badge/Opera-FF1B2D?style=for-the-badge&logo=Opera&logoColor=white)
-</center>
+<p align="center">
+  <b>WeBlocker</b> is a lightweight, privacy-focused Chrome Extension that helps you stay focused by <b>blocking distracting websites</b> and <b>URLs containing specific keywords</b> using Chrome's secure MV3 API. All processing is private, fast, and runs entirely within your browser.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Google_chrome-4285F4?style=for-the-badge&logo=Google-chrome&logoColor=white" />
+  <img src="https://img.shields.io/badge/Brave-FF1B2D?style=for-the-badge&logo=Brave&logoColor=white" />
+  <img src="https://img.shields.io/badge/Microsoft_Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vivaldi-EF3939?style=for-the-badge&logo=Vivaldi&logoColor=white" />
+  <img src="https://img.shields.io/badge/duckduckgo-de5833?style=for-the-badge&logo=duckduckgo&logoColor=white" />
+  <img src="https://img.shields.io/badge/Opera-FF1B2D?style=for-the-badge&logo=Opera&logoColor=white" />
+</p>
 
 ---
 ## ⚡ Features
@@ -72,7 +77,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 git clone https://github.com/ujaRHR/weblocker.git
 cd weblocker
 ```
-Make your changes and test using chrome://extensions > Load Unpacked
+> Make your changes and test using ```chrome://extensions``` > Load Unpacked
 
 ## 📣 Credits
 - Built with 🖤 by [Reajul Hasan Raju](https://github.com/ujaRHR)
@@ -89,4 +94,4 @@ If you found this extension useful:  <br> <br>
 This project is licensed under the [MIT License](https://github.com/ujaRHR/weblocker/blob/main/LICENSE).
 
 
-> "WeBlocker helps you focus not by forcing restrictions, but by giving you control over your digital environment."
+"WeBlocker helps you focus not by forcing restrictions, but by giving you control over your digital environment."

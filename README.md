@@ -40,7 +40,7 @@
 
 ### 🛠️ Manual Installation (for Developers)
 
-1. [Download](https://github.com/ujaRHR/weblocker/releases) or clone this repository:
+1. [Download](https://github.com/ujaRHR/weblocker/releases) and extract the zip or clone this repository:
   ```
   git clone https://github.com/ujaRHR/weblocker.git
   ```

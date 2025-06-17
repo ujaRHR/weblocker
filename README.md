@@ -32,7 +32,7 @@
 
 ### 🧩 **Install via Chrome Web Store (Recommended)**
 
-1. Go to the [Chrome Web Store](https://chrome.google.com/webstore/) (Under Review, use manual for now)
+1. Go to the [Chrome Web Store](https://chromewebstore.google.com/detail/akffgmkokcgiibdmfknbobliajcchoma)
 2. Click **"Add to Chrome/Brave/Edge"**
 3. Done! 🎉
 
@@ -82,13 +82,13 @@ cd weblocker
 ## 📣 Credits
 - Built with 🖤 by [Reajul Hasan Raju](https://github.com/ujaRHR)
 - Icons from [Iconify](https://iconify.design)
-- UI based on Tailwind CSS v4.0
+- UI based on [Tailwind CSS v4.0](https://tailwindcss.com/)
 
 ## Support
 If you found this extension useful:  <br> <br>
 ⭐ Star the repo <br>
 🐛 [Report issues](https://github.com/ujaRHR/weblocker/issues) <br>
-🖇️ Share with friends <br>
+🖇️ [Share with friends](https://chromewebstore.google.com/detail/akffgmkokcgiibdmfknbobliajcchoma) <br>
 
 ## 📜 License
 This project is licensed under the [MIT License](https://github.com/ujaRHR/weblocker/blob/main/LICENSE).

@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ujaRHR/weblocker/refs/heads/main/assets/images/wb_banner.png" width="600" alt="WeBlocker Banner">
+  <a href="https://chromewebstore.google.com/detail/akffgmkokcgiibdmfknbobliajcchoma" target="_blank">
+    <img src="https://raw.githubusercontent.com/ujaRHR/weblocker/refs/heads/main/assets/images/wb_banner.png" width="600" alt="WeBlocker Banner">
+  </a>
 </p>
 
 <h1 align="center">WeBlocker - Take Control of Your Digital Focus</h1>
